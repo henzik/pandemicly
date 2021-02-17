@@ -1,3 +1,5 @@
+
+const socket = io();
 //Aliases
 let Application = PIXI.Application,
     loader = PIXI.loader,
@@ -31,11 +33,10 @@ function connect() {
 }
 
 function setup() {
-  const cat = new PIXI.Sprite(app.loader.resources.cat.texture)
+  const cat = new Sprite(app.loader.resources.cat.texture)
   app.stage.addChild(cat)
   cat.x = Math.random()*400;
   cat.y = Math.random()*300;
 }
 
-const socket = io();
 connect()
